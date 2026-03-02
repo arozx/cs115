@@ -101,14 +101,16 @@ public class Participant implements Comparable<Participant> {
      */
     @Override
     public String toString() {
-        return String.format("%-15s%-15s%-15s%d", participantId.toUpperCase(), dateOfDataCollection, timeOfDataCollection, heartRate);
+        return String.format("%-15s%-15s%-15s%d", participantId.toUpperCase(), dateOfDataCollection,
+                timeOfDataCollection, heartRate);
     }
 
     /**
      * Compares this participant with another based on heart rate.
      *
      * @param other The other participant to compare with.
-     * @return A negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object.
+     * @return A negative integer, zero, or a positive integer as this object is
+     *         less than, equal to, or greater than the specified object.
      */
     @Override
     public int compareTo(Participant other) {

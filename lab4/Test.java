@@ -73,51 +73,51 @@ public class Test {
         for (int i = 1; i <= NUM_PARTICIPANTS; i++) {
             String participantId = "p" + i;
             String filename = DATA_DIR + File.separator + participantId + ".txt";
-            
+
             try {
                 File file = new File(filename);
                 Scanner fileScanner = new Scanner(file);
-                
+
                 double sum = 0;
                 int count = 0;
-                
+
                 while (fileScanner.hasNextDouble()) {
                     sum = sum + fileScanner.nextDouble();
                     count = count + 1;
                 }
                 fileScanner.close();
-                
+
                 if (count > 0) {
                     double rrMean = sum / count;
                     int hr = (int) Math.round((60.0 * 1000.0) / rrMean);
-                    
+
                     // Generate random date between 2019 and 2023
                     int year = 2019 + random.nextInt(5);
                     int month = 1 + random.nextInt(12);
                     int day = 1 + random.nextInt(28); // simplified to avoid invalid dates
                     String date = String.format("%04d-%02d-%02d", year, month, day);
-                    
+
                     // Generate random time
                     int hour = random.nextInt(24);
                     int minute = random.nextInt(60);
                     int second = random.nextInt(60);
                     String time = String.format("%02d-%02d-%02d", hour, minute, second);
-                    
+
                     participants.add(new Participant("P" + i, date, time, hr));
                 } else {
-                     System.out.println("Warning: File " + filename + " is empty or contains no valid data.");
+                    System.out.println("Warning: File " + filename + " is empty or contains no valid data.");
                 }
 
             } catch (FileNotFoundException e) {
                 System.out.println("Error: File not found - " + filename);
             } catch (Exception e) {
-                 System.out.println("Error processing file " + filename + ": " + e.getMessage());
+                System.out.println("Error processing file " + filename + ": " + e.getMessage());
             }
         }
-        
-        // Challenge Task 4.5: Sort the list in order of increasing HR
+
+        // 4.5: Sort the list in order of increasing HR (asc)
         Collections.sort(participants);
-        
+
         return participants;
     }
 
@@ -130,11 +130,11 @@ public class Test {
         try {
             PrintWriter writer = new PrintWriter(OUTPUT_FILE);
             writer.printf("%-15s%-15s%-15s%s%n", "ParticipantID", "Date", "Time", "HR");
-            
+
             for (Participant p : participants) {
                 writer.println(p.toString());
             }
-            
+
             writer.close();
         } catch (FileNotFoundException e) {
             System.out.println("Error: Could not create output file " + OUTPUT_FILE);
