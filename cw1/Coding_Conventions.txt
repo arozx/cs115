@@ -1,0 +1,51 @@
+Coding Conventions
+You cannot get your lab signed off if you severely violate these conventions. Also, you will lose
+marks on the Courseworks for violating these conventions. There may even be exam questions
+about coding conventions. In your later employment, you will find companies care about this
+and will enforce a coding convention.
+1. All class names will begin with a capital letter (e.g. MyClass and not myClass).
+2. All variables/attributes and methods (except the constructor) will begin with a small
+letter and be camel case (e.g. iLoveJava and not ILoveJava or i love java)
+3. All constants will be all caps with underscores. (e.g. I STILL LOVE JAVA and not iStillLoveJava
+or ISTILLLOVEJAVA)
+4. Constants can be public or private. Attributes will never be public. Attributes will only
+be accessed through methods.
+5. All of the constants and attributes of a class always appear at the top of the class. They
+are followed by all of the methods.
+6. Binary operators will have spaces around them (e.g. i + j and not i+j). This includes
+the : in a for each loop.
+7. Unary operators will never have a space around them (e.g. i++ and not i ++).
+8. Every block of code (encased in ’{’ and ’}’) will be indented consistently with the left
+edge of the contents of that block aligned: classes, loops, if statements, case statements,
+methods and others. You can use tabs or spaces, but try not to use a mixture of the two.
+9. Every block of a loop and if statement will always require ’{’ and ’}’. You will not omit
+them.
+10. The ’(’ and ’)’ characters in statements will be flush to the beginning and end of the
+statement. (e.g. if (x == 0) { and not if ( x == 0 ) {)
+11. Methods and classes will be documented using JavaDoc. You are expected to use this
+style for the coursework. There will be some flexibility here, but at the very least you
+must always comment your methods by stating what it does, all of its parameters, and its
+return type. Always comment your classes stating what the purpose of the class is.
+12. Complex bits of code in a method should have their own inline comment and be placed
+in a block separated by blank lines around it. You can, and will, lose marks for overcommenting. Overcommenting occurs when you have comments that do not add to the
+explanation of the code (e.g. int i = 0; //initialising i to zero.)
+13. Any objects which will be printed to the command line should have a toString() method
+which formats them appropriately.
+
+See FAQs overleaf.
+
+1
+
+Frequently Asked Questions
+• Do I need to comment everything? Yes! See previous page.
+• How much commenting does a class need? Not quite as much as you fear. One
+comment per class is needed, with its purpose. Author, date, and revision history are
+optional.
+• How much commenting is needed for a method? A method should state what
+it does, what the parameters, and what the return type is—–unless either of these are
+empty. Getters and Setters can have one comment for the block.
+• Do I need to format the Javadoc and provide output? Not for this module.
+
+2
+
+
