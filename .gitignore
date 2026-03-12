@@ -1,0 +1,6 @@
+*.class
+OUTPUT.txt
+*.md
+*.MD
+.idea/
+*.zip
